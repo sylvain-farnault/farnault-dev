@@ -15,3 +15,12 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { animatePresentation } from '../components/animate_presentation'
+
+
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  animatePresentation();
+});
