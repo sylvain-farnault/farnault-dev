@@ -40,22 +40,55 @@ section .avatar {
 }
 
 section form {
-  width: 100%;
+  width: 80%;
   padding: 24px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 150px;
+  padding-bottom: 150px;
 
+}
+
+section form div.input, input {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 50px;
+}
+
+section form > input   {
+  background-color: $main-call-to-action;
+  font-size: 32px;
+  color: white;
 }
 
 section form div.input {
+  display: flex;
 
 
   label {
-
+    flex-grow: 2;
   }
 
   input {
+    flex-grow: 3;
+  }
 
+  textarea {
+    flex-grow: 1;
+    height: 100px;
   }
 }
+
+section p {
+  width: 80%;
+
+  span {
+    font-weight: bolder;
+    color: white;
+  }
+}
+
+
+
 

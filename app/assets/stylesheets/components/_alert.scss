@@ -1,0 +1,17 @@
+@keyframes fade_out{
+    0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+}
+
+.alert {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  background-color: $main-call-to-action;
+  color: $main-font-color;
+  animation: 5s ease 0s normal forwards 1 fade_out;
+  z-index: 100;
+}
+

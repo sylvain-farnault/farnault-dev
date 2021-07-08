@@ -3,7 +3,7 @@ class ContactFormsController < ApplicationController
     @contact_form = ContactForm.new(contact_form_params)
 
     if @contact_form.save
-      redirect_to 'pages/home', alert: 'Votre message a bien été envoyé à Sylvain Farnault'
+      redirect_to root_path, alert: 'Votre message a bien été envoyé à Sylvain Farnault'
     else
       render 'pages/home'
     end
