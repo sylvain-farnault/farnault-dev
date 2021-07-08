@@ -1,3 +1,10 @@
-<section class="darker">
+<section class="darker" id="contact">
   <h1>Me contacter</h1>
+  <%= simple_form_for @contact_form do |f| %>
+    <%= f.input :purpose, label: 'Motif' %>
+    <%= f.input :mail %>
+    <%= f.input :phone_number, label: 'Téléphone' %>
+    <%= f.input :content, label: false %>
+    <%= f.submit 'Envoyer' %>
+  <% end %>
 </section>
