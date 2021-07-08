@@ -1,14 +1,18 @@
 $main-background-color-dark: #1c324f ;
 $main-background-color-darker: #141c29 ;
-$main-font-color: #ccc;
+$main-font-color: #D5EDFF;
 $main-border-color: #0099ff;
 $main-call-to-action: #0099ff;
 
 body {
-  background-color: $main-background-color-darker ;
+  // background-color: $main-background-color-darker;
   color: $main-font-color;
+  // border: 5px solid red;
   border-top: 20px solid $main-border-color;
   margin: 0;
+  background: image-url('montain_stars.jpg') no-repeat center center fixed;
+  background-size: cover;
+
 }
 
 .container {
@@ -18,8 +22,12 @@ body {
 h1 {
   font-size: 72px;
   font-weight: bolder;
-  color: white;
   text-align: center;
+
+  span {
+    color: $main-call-to-action;
+    font-weight: bolder;
+  }
 }
 
 h1.name {
@@ -28,13 +36,14 @@ h1.name {
   transition: all 1.5s ease-out;
   text-align: center;
 
+
   &.slide-down {
     transform: translateY(0px);
   }
 }
 
 
-img.avatar {
+img.avatarXXX {
   transform: translateX(-450px);
   transition: all 2s ease-out;
   box-shadow: inset 0px 0px 15px 4px rgba(255,255,255,1), 0px 0px 15px 4px rgba(255,255,255,1);
@@ -53,38 +62,49 @@ img.avatar {
   }
 }
 
-
-.service {
+.services {
+  // border: 5px solid green;
   font-size: 40px;
   width: auto;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: stretch;
+  flex-wrap: wrap;
   padding: 32px;
-
-  .main {
-    font-size: 56px;
-  }
-
-  .left {
-    align-self: flex-start;
-  }
-
-  .right {
-    align-self: flex-end;
-  }
 
   span {
     font-weight: bolder;
     color: white;
     font-size: 48;
-  }
-
-  p {
-    font-size: 48px;
-    border-bottom: 5px solid $main-border-color;
+    padding: 15px;
+    border: 1px solid $main-border-color;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px 0px $main-border-color;
+    text-align: center;
   }
 }
 
+@keyframes go_next {
+  from {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
 
+  to {
+    transform: translateY(24px);
+    opacity: 1;
+  }
+}
+
+.go-next {
+  min-height: 8vh;
+  // border: 5px solid pink;
+
+  i {
+    font-size: 96px;
+    animation-duration: 0.8s;
+    animation-name: go_next;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}
